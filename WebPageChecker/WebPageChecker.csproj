@@ -47,6 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Files.cs" />
     <Compile Include="Images.cs" />
     <Compile Include="Headings.cs" />
     <Compile Include="Links.cs" />

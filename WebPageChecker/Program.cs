@@ -79,7 +79,7 @@ namespace WebPageChecker
             }
 
             // Returns number of scripts.
-            int numberOfFiles = getNumberOfFiles(url);
+            int numberOfFiles = Files.getNumberOfFiles(html);
        
             // Write data to a .txt file.
             string mydocpath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
@@ -138,28 +138,5 @@ namespace WebPageChecker
             }
         }
 
-        public static int getNumberOfFiles(string url)
-        {
-            var html = new HtmlDocument();
-            html.LoadHtml(new WebClient().DownloadString(url));
-
-            var xpath = "//*[script]";
-
-            int count = 0;
-
-            if (html.DocumentNode.SelectNodes(xpath) == null)
-            {
-                count = 0;
-            }
-            else
-            {
-                foreach (HtmlNode node in html.DocumentNode.SelectNodes(xpath))
-                {
-                    count++;
-                }
-            }
-
-            return count;
-        }
     } // End class.
 }
