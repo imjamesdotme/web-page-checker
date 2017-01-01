@@ -26,25 +26,8 @@ namespace WebPageChecker
                 imageCount++;
 
                 try
-                {
-                    
+                {   
                     alt = imageNode.Attributes["alt"].Value;
-
-                    /*
-                    if (source == "")
-                    {
-
-                        source = imageNode.Attributes["data-*"].Value;
-
-                        if (source == "")
-                        {
-                            source = "NO SRC OR DATA-* FOUND!";
-                        }
-
-                        source = "No source found";
-
-                    }
-                    */
 
                     if (alt == null || alt == "")
                     {
@@ -59,27 +42,6 @@ namespace WebPageChecker
                 try
                 {
                     source = imageNode.Attributes["src"].Value;
-
-                    /*
-                    if (source == "")
-                    {
-                        source = "SRC IS EMPTY.";
-                    }
-                    */
-
-                    if (source == null || source == "")
-                    {
-
-                        source = imageNode.Attributes["data-src"].Value;
-
-                        if (source == "")
-                        {
-                            source = "NO SRC OR DATA-* FOUND!";
-                        }
-
-                        source = "No source found";
-
-                    }
                 }
                 catch
                 {

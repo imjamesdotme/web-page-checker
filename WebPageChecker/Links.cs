@@ -55,8 +55,7 @@ namespace WebPageChecker
                 {
                     hrefValue = url + hrefValue;
                 }
-
-                
+         
                 HttpWebRequest request = (HttpWebRequest)WebRequest.Create(hrefValue);
                 request.Timeout = 10000;
                 HttpWebResponse response = null;
